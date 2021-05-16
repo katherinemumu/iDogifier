@@ -7,6 +7,7 @@ import tkinter as tk
 import tkinter.font as font
 
 window = tk.Tk()
+window.title("iDogifier")
 
 #Prompt user input for image file
 title = tk.Label(text="Image file name:")
@@ -36,9 +37,6 @@ def handle_click(event):
     img_width = 180
     class_names = ['Husky', 'Pomeranian', 'Pug']
 
-    # flower_file = sys.argv[1]
-    # print(flower_file)
-
     new_model = tf.keras.models.load_model('dogmodel')
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -66,11 +64,8 @@ def handle_click(event):
 
     outcome.pack()
 
-    print(
-        "CLONED TRAIN: This image most likely belongs to {} with a {:.2f} percent confidence."
-        .format(class_names[np.argmax(score)], 100 * np.max(score))
-    )
-
 compareButton.bind("<Button-1>", handle_click)
+
+window.mainloop()
 
 
