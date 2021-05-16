@@ -4,6 +4,6 @@ This project will take in a picture of a dog, and return which breed it closely 
 
 Download the required packages in `requirements.txt`. 
 
-Run the script iDogifier.py in python IDLE to open up a GUI. (doesn't work so well in the command line)
+Use the command `python3 iDogifier.py` in the command line to run the app. (change according to python version)
 
-Enter the name of an image of a dog into the input box, and the percent similarity for the matching dog breed will be presented. 
+Enter the name of an image of a dog in the same directory into the input box, and the percent similarity for the matching dog breed will be presented. 
